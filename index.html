@@ -7,15 +7,36 @@
     <title>Random Dogs</title>
 </head>
 <body>
+    <!-- Sección de perros aleatorios -->
+<section id="random-dogs">
+    <h1>Random Dogs</h1>
+    <span id="error"></span>
     <div class="pic-content">
-        <h1>Random Dogs</h1>
-        <img id="img1"alt="Dog random photo">
-        <img id="img2"alt="Dog random photo">
-        <img id="img3"alt="Dog random photo">
+        <article>
+            <img id="random-img1" alt="Dog random photo">
+            <button id="save-dog1" onclick="saveFavouriteDogs()">Save the dog to favorites</button>
+        </article>
+        <article>
+            <img id="random-img2" alt="Dog random photo">
+            <button id="save-dog2" onclick="saveFavouriteDogs()">Save the dog to favorites</button>
+        </article>
     </div>
+    <!-- Botón para cargar más fotos -->
     <div class="button-content">
-        <button class="dog-button">Another cute dog?</button>
+        <button class="dog-button">Another cutes dogs?</button>
     </div>
-    <script src="./main.js"></script>
+</section>
+
+<!-- Sección de perros favoritos -->
+<section id="favorites-dogs">
+    <h2>Favorites Dogs</h2>
+    <article>
+        <img id="favorite-img1" alt="Dog favorite photo">
+        <button>Get out the dog</button>
+    </article>
+</section>
+
+<!-- Enlace al archivo JS -->
+<script src="./main.js"></script>
 </body>
 </html>

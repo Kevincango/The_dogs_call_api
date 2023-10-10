@@ -1,37 +1,69 @@
-    body {
-        background-color: #121212;
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-    }
-    .pic-content {
-        text-align: center;
-    }
-    .button-content{
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-    .dog-button {
-        margin-bottom: 20px;
-        background-color: #6200ea;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1em;
-        transition: background-color 0.3s;
-    }
-    .dog-button:hover {
-        background-color: #3700b3;
-    }
-    img {
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        margin-top: 20px;
-    }
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Cambiado de height a min-height */
+    margin: 0;
+}
+
+#random-dogs h1{
+    text-align: center;
+}
+
+.pic-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Para que los artículos (contenedores de imágenes) tengan un tamaño consistente */
+.pic-content article {
+    width: 300px;
+    text-align: center;
+}
+
+
+.button-content {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0; /* Ajustado para que tenga margen en la parte superior e inferior */
+    
+}
+
+.dog-button {
+    margin-bottom: 20px;
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.dog-button:hover {
+    background-color: #3700b3;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Estilo para el encabezado de la sección de perros favoritos */
+#favorites-dogs h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#favorites-dogs article{
+    display: flex;
+    flex-direction: column;
+}

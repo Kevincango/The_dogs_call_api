@@ -67,3 +67,106 @@ img {
     display: flex;
     flex-direction: column;
 }
+
+#favorites-dogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.save-dog {
+    margin-top: 5px;
+    background-color: #4CAF50;  /* Color verde para representar acción positiva de guardar */
+    color: white;  /* Texto blanco para contraste con el fondo oscuro */
+    padding: 10px 20px;  /* Espacio interno alrededor del texto */
+    border: none;  /* Sin borde por defecto */
+    border-radius: 5px;  /* Bordes ligeramente redondeados */
+    font-size: 16px;  /* Tamaño de letra adecuado para un botón */
+    cursor: pointer;  /* Cambia el cursor a mano al pasar sobre el botón */
+    transition: background-color 0.3s;  /* Efecto de transición al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.save-dog:hover {
+    background-color: #45a049;
+}
+
+#favorites-dogs button {
+    place-self: center;
+    width: 50px;
+    background-color: #f44336;  /* Color rojo para representar acción negativa de eliminar */
+    color: white;  /* Texto blanco para contraste */
+    padding: 8px 15px;  /* Espacio interno alrededor del texto */
+    border: none;  /* Sin borde por defecto */
+    border-radius: 5px;  /* Bordes ligeramente redondeados */
+    font-size: 16px;  /* Tamaño de letra adecuado para un botón */
+    cursor: pointer;  /* Cambia el cursor a mano al pasar sobre el botón */
+    transition: background-color 0.3s;  /* Efecto de transición al pasar el mouse */
+    margin-top: 5px;
+}
+
+/* Efecto al pasar el mouse sobre el botón de eliminar */
+#favorites-dogs button:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilo para ocultar el input original */
+#file {
+    display: none;
+}
+
+/* Estilo para la etiqueta que actuará como el botón personalizado */
+#upload-form label[for="file"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;  /* Para mostrar junto al botón "Upload" */
+}
+
+#upload-form label[for="file"]:hover {
+    background-color: #45a049;
+}
+
+#upload-form button {
+    background-color: #007BFF;  /* Color azul para representar acción de subida/envío */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;  /* Para mostrar junto al botón personalizado de archivo */
+    margin-left: 10px;  /* Espacio entre el botón personalizado de archivo y este botón */
+    position: relative;  /* Para posicionar el ícono dentro del botón */
+}
+
+#upload-form button:hover {
+    background-color: #0056b3;
+}
+
+#upload-form button:before {
+    position: absolute;
+    left: 10px;  /* Posicionar el ícono dentro del botón */
+    top: 50%;
+    transform: translateY(-50%);  /* Centrar verticalmente */
+}
+
+
+@media (max-width: 768px) {
+    #favorites-dogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Cuando la pantalla es menor a 480px, mostrar 1 columna */
+@media (max-width: 480px) {
+    #favorites-dogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

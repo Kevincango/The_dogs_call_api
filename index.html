@@ -14,11 +14,11 @@
     <div class="pic-content">
         <article>
             <img id="random-img1" alt="Dog random photo">
-            <button id="save-dog1" onclick="saveFavouriteDogs()">Save the dog to favorites</button>
+            <button class="save-dog" id="save-dog1">❤</button>
         </article>
         <article>
             <img id="random-img2" alt="Dog random photo">
-            <button id="save-dog2" onclick="saveFavouriteDogs()">Save the dog to favorites</button>
+            <button class="save-dog" id="save-dog2">❤</button>
         </article>
     </div>
     <!-- Botón para cargar más fotos -->
@@ -28,13 +28,20 @@
 </section>
 
 <!-- Sección de perros favoritos -->
+<h2>Favorites Dogs</h2>
 <section id="favorites-dogs">
-    <h2>Favorites Dogs</h2>
-    <article>
-        <img id="favorite-img1" alt="Dog favorite photo">
-        <button>Get out the dog</button>
-    </article>
 </section>
+
+<!-- Upload your dog -->
+<section id="upload-dog">
+    <h2>Upload your own dog!</h2>
+    <form id="upload-form">
+        <label for="file">Choose a file</label>
+        <input id="file" type="file" name="file">
+        <button type="button" onclick="uploadDogPhoto()">Upload</button>
+    </form>
+</section>
+
 
 <!-- Enlace al archivo JS -->
 <script src="./main.js"></script>
